@@ -2,18 +2,13 @@
 
 feature 'Viewing bookmarks' do
   scenario 'when visiting the index page' do
-    visit('/')
-    expect(page).to have_content 'Bookmark Manager'
-  end
-
-  scenario 'when visiting the bookmarks page' do
-    Bookmark.add(SITE_BBC_NEWS_URL, SITE_BBC_NEWS_TITLE)
-    Bookmark.add(SITE_GOOGLE_URL, SITE_GOOGLE_TITLE)
-    Bookmark.add(SITE_MAKERS_URL, SITE_MAKERS_TITLE)
+    Bookmark.add(BBC_NEWS_URL, BBC_NEWS_TITLE)
+    Bookmark.add(GOOGLE_URL, GOOGLE_TITLE)
+    Bookmark.add(MAKERS_URL, MAKERS_TITLE)
 
     visit('/')
-    expect(page).to have_link(SITE_BBC_NEWS_TITLE, href: SITE_BBC_NEWS_URL)
-    expect(page).to have_link(SITE_GOOGLE_TITLE, href: SITE_GOOGLE_URL)
-    expect(page).to have_link(SITE_MAKERS_TITLE, href: SITE_MAKERS_URL)
+    expect(page).to have_link(BBC_NEWS_TITLE, href: BBC_NEWS_URL)
+    expect(page).to have_link(GOOGLE_TITLE, href: GOOGLE_URL)
+    expect(page).to have_link(MAKERS_TITLE, href: MAKERS_URL)
   end
 end

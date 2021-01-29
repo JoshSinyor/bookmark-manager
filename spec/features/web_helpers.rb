@@ -2,17 +2,17 @@
 
 # Constants
 
-SITE_BBC_NEWS_URL = 'https://www.bbc.co.uk/news'
-SITE_BBC_NEWS_TITLE = 'BBC News'
+BBC_NEWS_URL = 'https://www.bbc.co.uk/news'
+BBC_NEWS_TITLE = 'BBC News'
 
-SITE_GOOGLE_URL = 'https://www.google.co.uk/'
-SITE_GOOGLE_TITLE = 'Google'
+GOOGLE_URL = 'https://www.google.co.uk/'
+GOOGLE_TITLE = 'Google'
 
-SITE_HACKER_TYPER_URL = 'http://www.hackertyper.com/'
-SITE_HACKER_TYPER_TITLE = 'Hacker Typer'
+HACKER_TYPER_URL = 'http://www.hackertyper.com/'
+HACKER_TYPER_TITLE = 'Hacker Typer'
 
-SITE_MAKERS_URL = 'https://www.makersacademy.com/'
-SITE_MAKERS_TITLE = 'Makers Academy'
+MAKERS_URL = 'https://www.makersacademy.com/'
+MAKERS_TITLE = 'Makers Academy'
 
 # Feature Test Web Helpers
 
