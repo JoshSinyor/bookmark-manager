@@ -11,18 +11,23 @@ GOOGLE_TITLE = 'Google'
 HACKER_TYPER_URL = 'http://www.hackertyper.com/'
 HACKER_TYPER_TITLE = 'Hacker Typer'
 
-MAKERS_URL = 'https://www.makersacademy.com/'
+MAKERS_URL = 'https://www.makers.tech/'
 MAKERS_TITLE = 'Makers Academy'
 
 # Feature Test Web Helpers
 
 def add_bookmark_feature(url, title)
-  visit('/')
+  visit '/'
   click_button('Add Bookmark')
-  fill_in :save_link, with: url
-  fill_in :save_title, with: title
+  fill_in :link, with: url
+  fill_in :title, with: title
   click_button('Save Bookmark')
 end
+
+# def delete_bookmark_feature(id)
+#   visit '/'
+#   click_button('Delete Bookmark')
+#   fill_in :
 
 # Unit Test Web Helpers
 
