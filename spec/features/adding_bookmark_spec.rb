@@ -4,7 +4,7 @@ feature 'Adding a bookmark' do
   scenario 'adds new links' do
     visit '/'
     click_button('Add Bookmark')
-    fill_in :link, with: HACKER_TYPER_URL
+    fill_in :url, with: HACKER_TYPER_URL
     fill_in :title, with: HACKER_TYPER_TITLE
     click_button('Save Bookmark')
 

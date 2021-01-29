@@ -5,8 +5,8 @@
 #     add_bookmark_feature(BBC_NEWS_URL, BBC_NEWS_TITLE)
 #     click_button('Edit')
 #
-#     fill_in('url', with: GOOGLE_URL)
-#     fill_in('title', with: GOOGLE_TITLE)
+#     fill_in :url with: GOOGLE_URL
+#     fill_in :title with: GOOGLE_TITLE
 #     click_button('Save')
 #
 #     visit '/'

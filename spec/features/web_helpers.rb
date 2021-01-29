@@ -19,7 +19,7 @@ MAKERS_TITLE = 'Makers Academy'
 def add_bookmark_feature(url, title)
   visit '/'
   click_button('Add Bookmark')
-  fill_in :link, with: url
+  fill_in :url, with: url
   fill_in :title, with: title
   click_button('Save Bookmark')
 end
