@@ -23,10 +23,10 @@ class Bookmark
   end
 
   def self.add(url, title)
-    @con.exec("INSERT INTO bookmarks (url, title) VALUES('#{url}', '#{title}') RETURNING *")
+    @con.exec "INSERT INTO bookmarks (url, title) VALUES('#{url}', '#{title}') RETURNING *"
   end
 
   def self.delete(id)
-    @con.exec("DELETE FROM bookmarks WHERE id=#{id}")
+    @con.exec "DELETE FROM bookmarks WHERE id=#{id}"
   end
 end

@@ -41,9 +41,9 @@ describe Bookmark do
 
   describe '.update' do
     it 'updates a bookmark from the database' do
-      con.exec "INSERT INTO bookmarks (url, title) VALUES('#{BBC_NEWS_URL}', '#{BBC_NEWS_TITLE}') RETURNING *"
+      con.exec "INSERT INTO bookmarks (url, title) VALUES('#{BBC_NEWS_URL}', '#{BBC_NEWS_TITLE}')"
       rs = con.exec("INSERT INTO bookmarks (url, title) VALUES('#{GOOGLE_URL}', '#{GOOGLE_TITLE}') RETURNING *")[0]
-      con.exec "INSERT INTO bookmarks (url, title) VALUES('#{MAKERS_URL}', '#{MAKERS_TITLE}') RETURNING *"
+      con.exec "INSERT INTO bookmarks (url, title) VALUES('#{MAKERS_URL}', '#{MAKERS_TITLE}')"
 
       Bookmark.update(rs[0]['id'], HACKER_TYPER_URL, HACKER_TYPER_TITLE)
 
