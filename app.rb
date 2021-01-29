@@ -24,4 +24,9 @@ class BookmarkManager < Sinatra::Base
     Bookmark.add(params[:save_link], params[:save_title])
     redirect '/'
   end
+
+  delete '/delete_link/:id' do
+    Bookmark.delete(params[:id])
+    redirect to '/'
+  end
 end

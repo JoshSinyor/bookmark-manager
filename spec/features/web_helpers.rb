@@ -16,10 +16,10 @@ SITE_MAKERS_TITLE = 'Makers Academy'
 
 # Feature Test Web Helpers
 
-def add_bookmark_feature(bookmark, title)
+def add_bookmark_feature(url, title)
   visit('/')
   click_button('Add Bookmark')
-  fill_in :save_link, with: bookmark
+  fill_in :save_link, with: url
   fill_in :save_title, with: title
   click_button('Save Bookmark')
 end
