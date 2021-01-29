@@ -13,6 +13,9 @@
           <input type="hidden" name="_method" value="delete">
           <input type = 'submit' name="delete_<%= bookmark.id %>" value = 'Delete Bookmark'>
         </form>
+        <form  action="/update_link/<%=bookmark.id%>" method="get">
+          <input type="submit" name="update_<%= bookmark.id %>" value="Edit">
+        </form>
       </li>
     <% end %>
   </ul>

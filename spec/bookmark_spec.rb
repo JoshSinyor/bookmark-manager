@@ -41,4 +41,8 @@ describe Bookmark do
       expect(rs[0]['exists']).to eq 'f'
     end
   end
+
+  describe '.update' do
+    
+  end
 end
