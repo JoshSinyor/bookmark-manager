@@ -20,22 +20,22 @@ class BookmarkManager < Sinatra::Base
     erb :add_bookmark
   end
 
-  post '/save_link' do
+  post '/added_bookmark' do
     Bookmark.add(params[:url], params[:title])
     redirect '/'
   end
 
-  delete '/delete_link/:id' do
+  delete '/delete_bookmark/:id' do
     Bookmark.delete(params[:id])
     redirect to '/'
   end
 
-  get '/update_link/:id' do
-    @bookmark_id = params[:id]
+  get '/edit_bookmark/:id' do
+    @bookmark = params[:id]
     erb :edit_bookmark
   end
 
-  patch '/updated_link/:id' do
+  patch '/edited_bookmark/:id' do
     Bookmark.update(params[:id])
     redirect '/'
   end

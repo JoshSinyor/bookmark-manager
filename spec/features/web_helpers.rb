@@ -18,25 +18,8 @@ MAKERS_TITLE = 'Makers Academy'
 
 def add_bookmark_feature(url, title)
   visit '/'
-  click_button('Add Bookmark')
+  click_button 'Add Bookmark'
   fill_in :url, with: url
   fill_in :title, with: title
-  click_button('Save Bookmark')
-end
-
-# def delete_bookmark_feature(id)
-#   visit '/'
-#   click_button('Delete Bookmark')
-#   fill_in :
-
-# Unit Test Web Helpers
-
-def get_by_id(id)
-  con = PG.connect dbname: 'bookmark_manager_test'
-  con.query("SELECT * FROM bookmarks WHERE id = '#{id}'")[0]
-end
-
-def get_id_by_url(url)
-  con = PG.connect dbname: 'bookmark_manager_test'
-  con.query("SELECT * FROM bookmarks WHERE url = '#{url}'")[0]
+  click_button 'Save Bookmark'
 end

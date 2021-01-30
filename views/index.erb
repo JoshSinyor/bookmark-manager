@@ -9,12 +9,12 @@
     <% @bookmarks.each do |bookmark| %>
       <li class="bookmark" id="bookmark-<%= bookmark.id %>">
         <a href="<%=bookmark.url%>"><%=bookmark.title%></a>
-        <form action = "/delete_link/<%=bookmark.id%>" method="post" >
+        <form action = "/delete_bookmark/<%=bookmark.id%>" method="post" >
           <input type="hidden" name="_method" value="delete">
           <input type = "submit" name="delete_<%= bookmark.id %>" value = "Delete Bookmark">
         </form>
-        <form  action="/update_link/<%=bookmark.id%>" method="get">
-          <input type="submit" name="update_<%= bookmark.id %>" value="Edit">
+        <form  action="/edit_bookmark/<%=bookmark.id%>" method="get">
+          <input type="submit" name="edit_<%= bookmark.id %>" value="Edit Bookmark">
         </form>
       </li>
     <% end %>

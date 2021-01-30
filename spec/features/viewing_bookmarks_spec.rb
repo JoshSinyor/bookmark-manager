@@ -1,10 +1,10 @@
 # frozen_string_literal: true
 
 feature 'Viewing bookmarks' do
-  scenario 'when visiting the index page' do
-    Bookmark.add(BBC_NEWS_URL, BBC_NEWS_TITLE)
-    Bookmark.add(GOOGLE_URL, GOOGLE_TITLE)
-    Bookmark.add(MAKERS_URL, MAKERS_TITLE)
+  scenario 'shows all bookmarks' do
+    add_bookmark_feature(BBC_NEWS_URL, BBC_NEWS_TITLE)
+    add_bookmark_feature(GOOGLE_URL, GOOGLE_TITLE)
+    add_bookmark_feature(MAKERS_URL, MAKERS_TITLE)
 
     visit '/'
     expect(page).to have_link(BBC_NEWS_TITLE, href: BBC_NEWS_URL)

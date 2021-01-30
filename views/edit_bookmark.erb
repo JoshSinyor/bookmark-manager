@@ -1,6 +1,12 @@
-<form action="/updated_link/<%= @bookmark_id %>" method="post">
+<form action="/edited_bookmark/<%= @bookmark[:id] %>" method="post">
   <input type="hidden" name="_method" value="patch">
-  <input type="text" name="url" placeholder="url" >
-  <input type="text" name="title" placeholder="title">
-  <input type="submit" value="Save">
+  <label for="url">
+    New Bookmark URL
+    <input type="text" name="url" placeholder="url" >
+  </label>
+  <label for="title">
+    New Bookmark Title
+    <input type="text" name="title" placeholder="title">
+  </label>
+  <input type="submit" value="Save Bookmark">
 </form>
